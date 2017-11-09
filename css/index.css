@@ -6,7 +6,7 @@ body {
     margin:0;
     padding:0;
 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .ymrs-text-white {
@@ -71,16 +71,14 @@ body {
     height: 60px;
     overflow: hidden;
     padding:16px;
+    position: fixed;
+    width: 100vw;
+    z-index: 9999;
 }
 
 #content {
     background-color: #FAFAFA;
-    height: calc(100% - 120px);
-    overflow: hidden;
-}
-
-#mobile_footer {
-    background-color: #1A237E;
-    height: 60px;
-    overflow: hidden;
+    height: 100%;
+    overflow-x: hidden;
+    padding: 76px 16px 16px;
 }
