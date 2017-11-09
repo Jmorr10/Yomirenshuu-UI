@@ -16,11 +16,53 @@
               integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
               crossorigin="anonymous">
 
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+              integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+              crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/index.css">
+
     </head>
-    <body>
+    <body class="fluid-container">
 
+        <div id="app_container" class="row flex-nowrap">
+            <nav id="main_nav" class="col-xs-4 d-flex flex-column flex-nowrap">
+                <a href="#"><i class="fa fa-bolt fa-2x"></i><span>Flash Mode</span></a>
+                <hr>
+                <a href="#"><i class="fa fa-arrows-h fa-2x"></i>Linear Mode</a>
+                <hr>
+                <a href="#"><i class="fa fa-paragraph fa-2x"></i>Paragraph Mode</a>
+                <hr>
+                <a href="#"><i class="fa fa-bar-chart fa-2x"></i>Statistics</a>
+                <hr>
+                <a href="#"><i class="fa fa-cogs fa-2x"></i>Settings</a>
+                <hr>
+                <a href="#"><i class="fa fa-question-circle-o fa-2x"></i>About</a>
+            </nav>
+            <main id="main_app" class="col-xs-8 container">
+                <header id="app_header" class="row d-flex align-items-center">
+                    <i id="nav_toggle"
+                       class="hidden-md hidden-lg fa fa-bars fa-2x ymrs-text-white"
+                       onclick="YMRS.toggleMenu()"></i>
+                </header>
 
+                <section id="content" class="row">
 
+                </section>
+
+                <footer id="mobile_footer" class="row">
+
+                </footer>
+            </main>
+        </div>
+
+        <script>
+            YMRS = {};
+            YMRS.toggleMenu = function () {
+                $('#main_nav').toggleClass('open');
+            };
+        </script>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
                 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
